@@ -66,9 +66,9 @@ export function Home() {
         overflow: "hidden",
         background: !showVideo || !hasVideo ? "#000" : undefined,
         backgroundImage:
-          !showVideo || !hasVideo
-            ? `url('/assets/FeaturedCoverImage.png')`
-            : undefined,
+        !showVideo || !hasVideo
+          ? `url('${import.meta.env.BASE_URL}assets/FeaturedCoverImage.png')`
+          : undefined,
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 100%",
       }}
