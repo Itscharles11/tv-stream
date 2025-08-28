@@ -13,7 +13,13 @@ import {
   Footer,
   FooterButton,
 } from "./LeftMenu.styled";
-import { assetUrl } from "../../lib/asset";
+import SearchIcon from '@/assets/icons/ICON-Search.png';
+import HomeIcon from '@/assets/icons/Group46.png';
+import TvIcon from '@/assets/icons/Group56.png';
+import MoviesIcon from '@/assets/icons/Group54.png';
+import GenresIcon from '@/assets/icons/Group53.png';
+import LaterIcon from '@/assets/icons/Group47.png';
+import BackgroundImage from '@/assets/FeaturedCoverImage.png';
 
 type Item = {
   key: string;
@@ -22,12 +28,12 @@ type Item = {
 };
 
 const NAV_ITEMS: Item[] = [
-  { key: "search", label: "Search", icon: assetUrl("/assets/icons/ICON - Search.png") },
-  { key: "home", label: "Home", icon: assetUrl("/assets/icons/Group 46.png") },
-  { key: "tv", label: "TV Shows", icon: assetUrl("/assets/icons/Group 56.png") },
-  { key: "movies", label: "Movies", icon: assetUrl("/assets/icons/Group 54.png") },
-  { key: "genres", label: "Genres", icon: assetUrl("/assets/icons/Group 53.png") },
-  { key: "later", label: "Watch Later", icon: assetUrl("/assets/icons/Group 47.png") },
+  { key: "search", label: "Search", icon: SearchIcon },
+  { key: "home", label: "Home", icon: HomeIcon },
+  { key: "tv", label: "TV Shows", icon: TvIcon },
+  { key: "movies", label: "Movies", icon: MoviesIcon },
+  { key: "genres", label: "Genres", icon: GenresIcon },
+  { key: "later", label: "Watch Later", icon: LaterIcon },
 ];
 
 const FOOTER_ITEMS: string[] = ["LANGUAGE", "GET HELP", "EXIT"];
@@ -49,7 +55,7 @@ export function LeftMenu() {
         {menuExpanded && (
           <>
             <UserAvatar
-              src={`${assetUrl('/assets/FeaturedCoverImage.png')}`}
+              src={BackgroundImage}
               alt="Daniel profile"
             />
             <Username>Daniel</Username>

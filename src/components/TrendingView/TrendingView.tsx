@@ -75,7 +75,7 @@ export const TrendingView = ({
             <Slide key={movie.Id}>
               <Card onClick={() => handleClick(movie)}>
                 <Poster
-                  src={`assets/${movie.CoverImage}`}
+                  src={`${import.meta.env.BASE_URL}assets/${movie.CoverImage}`}
                   alt={movie.Title}
                   loading="lazy"
                   draggable={false}

@@ -28,7 +28,7 @@ export const MainContent: FC<Props> = ({ selectedMovie }) => {
           <Title variant="h2">{selectedMovie?.Title ?? ""}</Title>
 
           <TitleImage
-            src={`assets/${selectedMovie?.TitleImage ?? ""}`}
+            src={`${import.meta.env.BASE_URL}assets/${selectedMovie?.TitleImage ?? ""}`}
             alt={selectedMovie?.Title ?? ""}
           />
 
