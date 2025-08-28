@@ -13,6 +13,7 @@ import {
   Footer,
   FooterButton,
 } from "./LeftMenu.styled";
+import { assetUrl } from "../../lib/asset";
 
 type Item = {
   key: string;
@@ -21,12 +22,12 @@ type Item = {
 };
 
 const NAV_ITEMS: Item[] = [
-  { key: "search", label: "Search", icon: "/assets/icons/ICON - Search.png" },
-  { key: "home", label: "Home", icon: "/assets/icons/Group 46.png" },
-  { key: "tv", label: "TV Shows", icon: "/assets/icons/Group 56.png" },
-  { key: "movies", label: "Movies", icon: "/assets/icons/Group 54.png" },
-  { key: "genres", label: "Genres", icon: "/assets/icons/Group 53.png" },
-  { key: "later", label: "Watch Later", icon: "/assets/icons/Group 47.png" },
+  { key: "search", label: "Search", icon: assetUrl("/assets/icons/ICON - Search.png") },
+  { key: "home", label: "Home", icon: assetUrl("/assets/icons/Group 46.png") },
+  { key: "tv", label: "TV Shows", icon: assetUrl("/assets/icons/Group 56.png") },
+  { key: "movies", label: "Movies", icon: assetUrl("/assets/icons/Group 54.png") },
+  { key: "genres", label: "Genres", icon: assetUrl("/assets/icons/Group 53.png") },
+  { key: "later", label: "Watch Later", icon: assetUrl("/assets/icons/Group 47.png") },
 ];
 
 const FOOTER_ITEMS: string[] = ["LANGUAGE", "GET HELP", "EXIT"];
@@ -48,7 +49,7 @@ export function LeftMenu() {
         {menuExpanded && (
           <>
             <UserAvatar
-              src="/assets/FeaturedCoverImage.png"
+              src={`${assetUrl('/assets/FeaturedCoverImage.png')}`}
               alt="Daniel profile"
             />
             <Username>Daniel</Username>
