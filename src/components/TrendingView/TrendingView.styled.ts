@@ -2,14 +2,12 @@ import { styled } from "@mui/material/styles";
 import Box, { type BoxProps } from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
-/** Base tokens (desktop defaults) */
 export const GAP_PX = 12;
 
 export const Root = styled(Box)<BoxProps>(({ theme }) => ({
   width: "100%",
   paddingInline: 24,
   paddingBlock: 16,
-
   [theme.breakpoints.down("sm")]: {
     paddingInline: 12,
     paddingBlock: 12,
@@ -18,7 +16,6 @@ export const Root = styled(Box)<BoxProps>(({ theme }) => ({
 
 export const Title = styled(Typography)(({ theme }) => ({
   marginBottom: 8,
-  // h5 on md+, h6 on sm-, slightly smaller on xs
   ...theme.typography.h5,
   [theme.breakpoints.down("md")]: {
     ...theme.typography.h6,
@@ -29,19 +26,13 @@ export const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
-/**
- * Viewport exposes CSS vars:
- * --gap and --perView change by breakpoint.
- * XS: 2,  SM: 3,  MD: 4,  LG: 6,  XL: 8
- */
 export const Viewport = styled(Box)<BoxProps>(({ theme }) => ({
   outline: "none",
   overflow: "hidden",
   width: "100%",
   touchAction: "pan-y",
   "--gap": `${GAP_PX}px`,
-  "--perView": "8", // XL default
-
+  "--perView": "8",
   [theme.breakpoints.down("lg")]: {
     "--perView": "6",
   },
@@ -52,7 +43,6 @@ export const Viewport = styled(Box)<BoxProps>(({ theme }) => ({
     "--perView": "3",
   },
   [theme.breakpoints.down(400)]: {
-    // super small phones
     "--perView": "2",
   },
 }));
